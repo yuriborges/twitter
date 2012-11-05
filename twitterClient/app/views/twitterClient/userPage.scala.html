@@ -1,0 +1,33 @@
+@(user: model.User, ListUserTimeLine: List[model.UserTimeLine])
+@main("Twitter Client") {
+
+	<div id="container">
+		<div id="left">
+			<img alt="10px" src="@user.getImageUrl()"/>
+			<a href="@routes.TwitterController.userPage" > @user.getName()</a>
+			<p>&#64;@user.getScreenName() <a href="@routes.TwitterController.logout" >Logout</a> </p><br>
+			@helper.form(action =  routes.TwitterController.search){
+			 <input type="text" name="searchQuery">
+			 <input type="submit" class="button seacrh" value="search"/> 
+			}
+	   
+		</div>
+		<div id="center">
+		@helper.form(action =  routes.TwitterController.postNewStatus){
+			<textarea id="status" name="status"  rows=3 cols=30 maxlength="140"> </textarea>
+    		<input type="submit" class="button Tweet" value="Tweet"/> 
+		}
+		@for(userTimeLine <- ListUserTimeLine){
+			<div id="tweet" >
+				<p>
+				    <img alt="10px" src="@userTimeLine.getUser().getImageUrl()"/>
+				    @userTimeLine.getUser().getName()
+				    &#64;@userTimeLine.getUser().getScreenName()
+			    </p>
+				<p style="margin-left: 20px">@userTimeLine.getText()</p>
+				<p>Create at: @userTimeLine.getDate()</p>
+    		</div>
+		}
+		</div>
+	</div>
+}

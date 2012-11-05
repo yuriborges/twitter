@@ -1,0 +1,12 @@
+@main("Twitter Client") {
+	
+	<img alt="10"  src="@routes.Assets.at("images/oauth_application.png")"/>
+	<p class="indexFont"> Welcome to Twitter client  by Yuri Borges </p>
+	
+    @helper.form(action = routes.TwitterController.loadUserPage) {
+    	
+    	<p class="indexFont"> Enter the PIN code here:
+    	<input type="text" id="pin" name="pin"/></p>
+    	<input type="submit" class="submit"  value="Start Application"/> 
+    }
+}

@@ -1,0 +1,66 @@
+body {
+	background-color: #00BFFF;
+	text-align: center;
+}
+
+.submit{
+	font-size: 50px;
+    border: 1px solid #000;
+    background-color: #07A9E7;
+    color: #FFF;
+    padding: 20px 50px;
+    border-radius: 40px;
+}
+
+.button{
+	border: 1px solid #000;
+    background-color: #07A9E7;
+    color: #FFF;
+    padding: 20px 50px;
+    border-radius: 40px;
+}
+
+.button .Tweet{
+    font-size: 20px;
+}
+.button .seacrh{
+    font-size: 10px;
+}
+
+.indexFont {
+	font-size: 40px;
+	color: #000;
+	font-family: Gill Sans / Gill Sans MT, sans-serif;
+}
+
+#cointainer{
+    width: 100%;
+    font-size: 12px;
+    overflow: hidden;
+    background: #fff
+}
+#left {
+    float: left; 
+    width: 33%;
+    background-color: #fff;
+}
+#center { 
+    float: left;
+    width: 67%;
+}
+
+#status {
+	margin: 2px;
+	width: 295px;
+	height: 141px;
+}
+
+#tweet{
+	text-align: left;
+	background-color: #fff;
+    margin: 0px 0px -10px;
+}
+
+p {
+    margin-left: 10px;
+}

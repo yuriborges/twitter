@@ -1,0 +1,9 @@
+@main("Twitter Client") {
+	
+	<img alt="10px"  src="@routes.Assets.at("images/oauth_application.png")"/>
+	<p class="indexFont"> Welcome to Twitter client  by Yuri Borges </p>
+	
+    @helper.form(action = routes.TwitterController.start) {
+    	<input type="submit" class="submit" value="Authorize the App"/> 
+    }
+}
